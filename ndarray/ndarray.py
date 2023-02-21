@@ -1,40 +1,33 @@
 import numpy as np
-print("version of numpy: ",np.version)
-print("version number of numpy: ",np.__version__)
 
+
+"""nd array is the most important object available in python
+It allows us to create and manipulate multidimentinal arrays"""
+
+#nd array creation
+"""To create an ndarray we can use the array method of numpy"""
+"""It takes among others args, at least an object
+That object can be a sequence(list, tuple)"""
 #an array
 arr=np.array([1,2,3,4])
 print("arr:",arr)
 print("type(arr): ",type(arr))
-print("arr.ndim: ",arr.ndim)
-print("elements type: ",arr.dtype)
-print("arr.itemsize: ",arr.itemsize)
-print("arr.size: ",arr.size)
-print("arr.shape",arr.shape)
-print("len(arr.shape)",len(arr.shape))
 
+#another array
 
+arr2=np.array([[1,2,3],[4,5,6]])
+print("arr2:",arr2)
+print("type(arr2): ",type(arr2))
 
-for elt in arr:
-    print(elt)
-
-#multi-dimensional array
-arr=np.array([[1,2,3],[4,5,6]])
-print("arr:",arr,sep="\n")
-print("type(arr)",type(arr))
-print("arr.ndim: ",arr.ndim)
-print("elements type:",arr.dtype)
-print("arr.itemsize:",arr.itemsize)
-print("arr.size: ",arr.size)
-print("arr.shape",arr.shape)
-print("len(arr.shape)",len(arr.shape))
+#with tuple
+arr3=np.array(([1,2,3],[4,5,6]))
+print("arr3:",arr2)
+print("type(arr3): ",type(arr3))
 
 
 
 
-
-for elt in arr:
-    print(elt)
+"""
 
 cplx=np.array([1,2,5,7],dtype=complex)
 print("complex array:",cplx)
@@ -116,6 +109,19 @@ b = np.array([[1,2,3],[12, 19, 29]])
 print("Arrays vertically concatenated\n",np.vstack((a,b)));
 print("Arrays horizontally concatenated\n",np.hstack((a,b)))
 
+
+print("arr:",arr)
+x=arr.ravel()
+print("x:",x)
+print("type(x)",type(x))
+print("x.ndim",x.ndim)
+lst=x.tolist()
+print("lst",lst)
+
+
+lst2=arr.tolist()
+print("lst2",lst2)
+"""
 
 
 
